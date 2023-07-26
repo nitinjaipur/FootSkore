@@ -2,8 +2,9 @@ import React from 'react';
 import { View, ScrollView, Text, FlatList} from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 import { FixtureDetailCard } from '../../components/index';
-import { fixtureStyle } from './style';
+import { fixtureStyle, globalSearchStyle } from './style';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { TextInput } from 'react-native-paper';
 
 const calendarData = [
   {
@@ -92,4 +93,44 @@ const Fixture = () => {
   );
 }
 
-export { Fixture };
+const GlobalSearch = () => {
+  return(
+    <View style={globalSearchStyle.container}>
+       
+      <View style={globalSearchStyle.headerMain}>
+        <View style={globalSearchStyle.header}>
+          <Icon name="arrow-back-outline" size={s(21)} color='#808797' />
+          <View style={globalSearchStyle.searchBox}>
+            <Icon name="search-outline" size={s(25)}  />
+            <View style={{ width: '75%'}}>
+              <TextInput style={globalSearchStyle.serachTextInput} ></TextInput>
+            </View>
+            <Icon name="close-circle" size={s(21)} color='#808797'  />
+          </View>
+        </View>
+        <View style={globalSearchStyle.options}>
+          <View style={globalSearchStyle.optionView}>
+            <Text>Fixture</Text>
+          </View>
+          <View style={globalSearchStyle.optionView}>
+            <Text>Team</Text>
+          </View>
+          <View style={globalSearchStyle.optionView}>
+            <Text>Live</Text>
+          </View>
+          <View style={globalSearchStyle.optionView}>
+            <Text>League</Text>
+          </View>
+        </View>
+      </View>
+      
+      <View style={globalSearchStyle.body}></View>
+
+    </View>
+  );
+}
+
+
+
+
+export { Fixture, GlobalSearch };

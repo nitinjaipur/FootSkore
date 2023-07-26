@@ -59,4 +59,56 @@ const fixtureStyle = StyleSheet.create({
   }
 })
 
-export { fixtureStyle };
+const globalSearchStyle = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    marginTop: s(26)
+  },
+  headerMain: {
+    flex: 1.5,
+  },
+  header: {
+    flex: 1,
+    width: '85%',
+    alignSelf: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  
+  },
+  options: {
+    flex: 0.5,
+    width: '85%',
+    alignSelf: 'center',
+    flexDirection: 'row',
+    width: '70%',
+    alignSelf: 'center',
+    marginLeft: s(40),
+    alignItems: 'center',
+  },
+  body: {
+    flex: 10,
+  },
+
+  searchBox: {
+    width: '85%',
+    height: '80%',
+    backgroundColor: '#EBEBEB',
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: 10,
+  },
+  serachTextInput: {
+    backgroundColor: '#EBEBEB',
+    height: 40
+  },
+  optionView: {
+    backgroundColor: '#EBEBEB',
+    margin: s(5)
+  }
+})
+
+
+
+export { fixtureStyle, globalSearchStyle };
