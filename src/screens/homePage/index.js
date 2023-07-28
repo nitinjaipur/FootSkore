@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, ScrollView, Text, FlatList} from 'react-native';
+import { View, ScrollView, Text, FlatList, Image} from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 import { FixtureDetailCard } from '../../components/index';
 import { fixtureStyle, globalSearchStyle } from './style';
@@ -124,7 +124,77 @@ const GlobalSearch = () => {
         </View>
       </View>
       
-      <View style={globalSearchStyle.body}></View>
+      <View style={globalSearchStyle.body}>
+
+        <View style={globalSearchStyle.bodyMatch}>
+          <View style={globalSearchStyle.bodyMatchDT}>
+            <Text style={globalSearchStyle.bodyMatchDTText}>2022-09-09</Text>
+            <Text style={globalSearchStyle.bodyMatchDTText}>12:30</Text>
+          </View>
+          <View style={globalSearchStyle.bodyMatchBody}>
+            <View style={globalSearchStyle.bodyMatchBodyLeft}>
+              <Icon name='home-sharp' size={22} />
+              <Image source={require('../../assets/images/cardGraphicsLeft.png')} />
+              <Text>Manchester United</Text>
+            </View>
+            <View style={globalSearchStyle.bodyMatchBodyCentre}>
+              <Text style={globalSearchStyle.bodyMatchBodyCentreStatus}>First Half</Text>
+              <Text style={globalSearchStyle.bodyMatchBodyCentreScore}>3 : 2</Text>
+              <View style={globalSearchStyle.bodyMatchBodyCentreRadio}><Icon name='radio-button-on-outline' color='#E92742' size={15} /><Text style={globalSearchStyle.bodyMatchBodyCentreRadioText}>68'</Text></View>
+            </View>
+            <View style={globalSearchStyle.bodyMatchBodyRight}>
+              <Icon name='airplane' size={22} />
+              <Image source={require('../../assets/images/cardGraphicsLeft.png')} />
+              <Text>Zenith U19</Text>
+            </View>
+          </View>
+        </View>
+
+        <View style={globalSearchStyle.bodyHost}>
+          <Image source={require('../../assets/images/cardGraphicsLeft.png')} style={{height: s(50), width: s(50)}} />
+          <Text style={globalSearchStyle.bodyHostTitleText}>Manchester United</Text>
+        </View>
+
+        <View style={globalSearchStyle.bodyStatus}>
+          <View style={globalSearchStyle.bodyStatusHeader}>
+            <View style={globalSearchStyle.bodyStatusHeaderCardTitleLeft}>
+              <Image source={require('../../assets/images/cardTitleImage.png')} />
+              <Text style={globalSearchStyle.cardTitleText}>UEFA Champion League</Text>
+            </View>
+            <Text style={{color: '#808797'}}>USA</Text>
+          </View>
+
+          <View style={globalSearchStyle.bodyStatusDetails}>
+            <Text style={{color: '#E92742', fontSize: s(12), fontWeight: '600'}}>68'</Text>
+            <View style={globalSearchStyle.bodyStatusDetailsTeam}>
+              <View style={[globalSearchStyle.bodyStatusDetailsT, {borderBottomWidth: 1, borderBottomColor: '#808797' }]}>
+              <Image source={require('../../assets/images/cardTitleImage.png')} />
+                <View style={globalSearchStyle.detailHolder}>
+                  <Text>Manchester United</Text>
+                  <Text style={{color: '#1F8E4B'}}>2</Text>
+                </View>
+              </View>
+              <View style={globalSearchStyle.bodyStatusDetailsT}>
+                <Image source={require('../../assets/images/cardTitleImage.png')} />
+                <View style={globalSearchStyle.detailHolder}>
+                  <Text>Rewa</Text>
+                  <Text style={{color: '#1F8E4B'}}>1</Text>
+                </View>
+              </View>
+            </View>
+          </View>
+
+        </View>
+
+        <View style={globalSearchStyle.bodyHostMini}>
+          <Image source={require('../../assets/images/cardGraphicsLeft.png')} />
+          <View style={{marginLeft: s(10)}}>
+            <Text style={globalSearchStyle.bodyHostMiniTeam}>Manchester United</Text>
+            <Text style={globalSearchStyle.bodyHostMiniCountry}>England</Text>
+          </View>
+        </View>
+
+      </View>
 
     </View>
   );

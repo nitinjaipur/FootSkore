@@ -89,6 +89,8 @@ const globalSearchStyle = StyleSheet.create({
   },
   body: {
     flex: 10,
+    justifyContent: 'flex-start',
+    alignItems: 'center'
   },
 
   searchBox: {
@@ -106,7 +108,156 @@ const globalSearchStyle = StyleSheet.create({
   optionView: {
     backgroundColor: '#EBEBEB',
     margin: s(5)
-  }
+  },
+
+  bodyMatch: {
+    height: '23%',
+    width: '85%',
+    alignItems: 'center',
+    borderRadius: 10,
+    marginTop: s(20),
+    backgroundColor: '#EBEBEB',
+  },
+  bodyHost: {
+    height: '18%',
+    width: '85%',
+    borderRadius: 10,
+    backgroundColor: '#EBEBEB',
+    marginTop: s(20),
+    justifyContent: 'space-evenly',
+    alignItems: 'center'
+  },
+  bodyStatus: {
+    height: '26%',
+    width: '85%',
+    borderRadius: 10,
+    backgroundColor: '#EBEBEB',
+    marginTop: s(20),
+    alignItems: 'center'
+  },
+  bodyHostMini: {
+    height: '9%',
+    width: '85%',
+    borderRadius: 10,
+    backgroundColor: '#EBEBEB',
+    marginTop: s(20),
+    alignItems: 'center',
+    flexDirection: 'row'
+  },
+
+  bodyMatchDT: {
+    height: '20%',
+    width: '90%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    
+  },
+  bodyMatchBody: {
+    height: '80%',
+    flexDirection: 'row',
+  },
+
+  bodyMatchDTText: {
+    fontWeight: '600',
+    fontSize: s(13)
+  },
+
+  bodyMatchBodyLeft: {
+    height: '95%',
+    width: '25%',
+    justifyContent: 'space-evenly',
+    alignItems: 'center'
+  },
+  bodyMatchBodyCentre: {
+    height: '85%',
+    width: '50%',
+    justifyContent: 'space-evenly',
+    alignItems: 'center',
+    alignSelf: 'center'
+  },
+  bodyMatchBodyRight: {
+    height: '95%',
+    width: '25%',
+    justifyContent: 'space-evenly',
+    alignItems: 'center'
+  },
+
+  bodyMatchBodyCentreStatus: {
+    color: '#E92742',
+    fontSize: s(15),
+    fontWeight: 'bold'
+  },
+  bodyMatchBodyCentreScore: {
+    fontSize: s(35),
+    fontWeight: 'bold'
+  },
+  bodyMatchBodyCentreRadio: {
+    backgroundColor: '#F5DDE6',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
+    borderRadius: s(10),
+    width: s(45),
+    height: s(25)
+  },
+  bodyMatchBodyCentreRadioText: {
+    color: '#E92742',
+    fontSize: s(11),
+  },
+  bodyHostTitleText: {
+    fontSize: s(20),
+    fontWeight: '500'
+  },
+
+  bodyHostMiniTeam: {
+    margin: s(2)
+  },
+  bodyHostMiniCountry: {
+    margin: s(2),
+    color: '#808797',
+  },
+
+  bodyStatusHeader: {
+    borderBottomWidth: 1,
+    borderBottomColor: '#808797',
+    height: '30%',
+    width: '90%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderColor: '#808797'
+  },
+  bodyStatusDetails: {
+    height: '70%',
+    width: '90%',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center'
+  },
+
+  bodyStatusHeaderCardTitleLeft: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+
+  bodyStatusDetailsTeam: {
+    height: '90%',
+    width: '80%',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  bodyStatusDetailsT: {
+    height: '50%',
+    width: '90%',
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  detailHolder: {
+    flexDirection: 'row',
+    marginLeft: s(10),
+    flex: 1,
+    justifyContent: 'space-between'}
 })
 
 
