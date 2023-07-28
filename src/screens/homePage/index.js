@@ -201,6 +201,4 @@ const GlobalSearch = () => {
 }
 
 
-
-
 export { Fixture, GlobalSearch };
