@@ -77,17 +77,17 @@ const GlobalSearch = () => {
           <SearchBox />
         </View>
         <View style={style.options}>
-          <View style={[style.optionView, {backgroundColor: card==="Fixture"?'#E92742':'#EBEBEB'}]}>
-            <Text onPress={() => {setCard('Fixture')}} >Fixture</Text>
+          <View style={ [style.optionView, { backgroundColor: card === "Fixture" ? '#E92742' : '#EBEBEB' }] }>
+            <Text style={{ fontWeight: '700', color: card === "Fixture" ? '#fff' : '#808797' }} onPress={() => { card !== 'Fixture' ? setCard('Fixture') : setCard('all') }} >Fixture</Text>
           </View>
-          <View style={[style.optionView, {backgroundColor: card==="Team"?'#E92742':'#EBEBEB'}]}>
-            <Text onPress={() => {setCard('Team')}}>Team</Text>
+          <View style={ [style.optionView, { backgroundColor: card === "Team" ? '#E92742' : '#EBEBEB' }] }>
+            <Text style={{ fontWeight: '700', color: card === "Team" ? '#fff' : '#808797' }} onPress={() => { card !== 'Team' ? setCard('Team') : setCard('all') }}>Team</Text>
           </View>
-          <View style={[style.optionView, {backgroundColor: card==="Live"?'#E92742':'#EBEBEB'}]}>
-            <Text onPress={() => {setCard('Live')}}>Live</Text>
+          <View style={ [style.optionView, { backgroundColor: card === "Live" ? '#E92742' : '#EBEBEB' }] }>
+            <Text style={{ fontWeight: '700', color: card === "Live" ? '#fff' : '#808797' }} onPress={() => { card !== 'Live' ? setCard('Live') : setCard('all') }}>Live</Text>
           </View>
-          <View style={[style.optionView, {backgroundColor: card==="League"?'#E92742':'#EBEBEB'}]}>
-            <Text onPress={() => {setCard('League')}}>League</Text>
+          <View style={ [style.optionView, { backgroundColor: card === "League" ? '#E92742' : '#EBEBEB' }] }>
+            <Text style={{ fontWeight: '700', color: card === "League" ? '#fff' : '#808797' }} onPress={() => { card !== 'League' ? setCard('League') : setCard('all') }}>League</Text>
           </View>
         </View>
       </View>
