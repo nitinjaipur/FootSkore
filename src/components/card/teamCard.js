@@ -22,7 +22,7 @@ const style = StyleSheet.create({
 const TeamCard = () => {
   return(
     <View style={style.bodyHost}>
-      <Image source={require('../assets/images/cardGraphicsLeft.png')} style={{height: s(50), width: s(50)}} />
+      <Image source={require('../../assets/images/cardGraphicsLeft.png')} style={{height: s(50), width: s(50)}} />
       <Text style={style.bodyHostTitleText}>Manchester United</Text>
     </View>
     );

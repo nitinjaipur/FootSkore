@@ -56,7 +56,7 @@ const LiveCard = () => {
     <View style={style.container}>
       <View style={style.header}>
         <View style={style.headerLeft}>
-          <Image source={require('../assets/images/cardTitleImage.png')} />
+          <Image source={require('../../assets/images/cardTitleImage.png')} />
           <Text>UEFA Champion League</Text>
         </View>
         <Text style={{color: '#808797'}}>USA</Text>
@@ -65,14 +65,14 @@ const LiveCard = () => {
         <Text style={{color: '#E92742', fontSize: s(12), fontWeight: '600'}}>68'</Text>
         <View style={style.teams}>
           <View style={[style.teamsLive, {borderBottomWidth: 1, borderBottomColor: '#808797' }]}>
-            <Image source={require('../assets/images/cardTitleImage.png')} />
+            <Image source={require('../../assets/images/cardTitleImage.png')} />
             <View style={style.detailHolder}>
               <Text>Manchester United</Text>
               <Text style={{color: '#1F8E4B'}}>2</Text>
             </View>
           </View>
           <View style={style.teamsLive}>
-            <Image source={require('../assets/images/cardTitleImage.png')} />
+            <Image source={require('../../assets/images/cardTitleImage.png')} />
             <View style={style.detailHolder}>
               <Text>Rewa</Text>
               <Text style={{color: '#1F8E4B'}}>1</Text>

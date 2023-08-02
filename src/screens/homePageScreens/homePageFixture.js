@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList, StyleSheet} from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
-import { FixtureDetailCard } from '../components/index';
+import { FixtureDetailCard } from '../../components/index';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const style = StyleSheet.create({

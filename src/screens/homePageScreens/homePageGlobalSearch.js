@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, StyleSheet} from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { SearchBox, FixtureCard, TeamCard, LiveCard, LeagueCard } from '../components/index';
+import { SearchBox, FixtureCard, TeamCard, LiveCard, LeagueCard } from '../../components/index';
 
 const style = StyleSheet.create({
   container: {

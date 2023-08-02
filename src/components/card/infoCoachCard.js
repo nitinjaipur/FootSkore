@@ -75,7 +75,7 @@ const InfoCoachCard = () => {
       </View>
 
       <View style={style.imageContainer}>
-        <Image source={require('../assets/images/coach.png')} />
+        <Image source={require('../../assets/images/coach.png')} />
       </View>
     </View>
   );

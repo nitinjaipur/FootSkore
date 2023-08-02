@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { LeagueCard } from './index';
+import { LeagueCard } from '../index';
 
 const style = StyleSheet.create({
   main: {
@@ -73,7 +73,7 @@ const StandingCard = () => {
   return (
     <View style={style.main}>
       <View style={style.leagueContainer}>
-        <Image source={require('../assets/images/cardGraphicsLeft.png')} style={style.leagueImage} />
+        <Image source={require('../../assets/images/cardGraphicsLeft.png')} style={style.leagueImage} />
         <Text style={style.leagueTitle}>National Football League</Text>
       </View>
       <View style={style.detailContainer}>

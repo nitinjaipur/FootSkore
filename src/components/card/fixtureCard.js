@@ -61,7 +61,7 @@ const FixtureCard = () => {
     <View style={style.container}>
       <View style={style.left}>
         <Icon name='home-sharp' size={22} />
-        <Image source={require('../assets/images/cardGraphicsLeft.png')} />
+        <Image source={require('../../assets/images/cardGraphicsLeft.png')} />
         <Text>Manchester United</Text>
       </View>
       <View style={style.centre}>
@@ -73,7 +73,7 @@ const FixtureCard = () => {
       </View>
       <View style={style.right}>
         <Icon name='airplane' size={22} />
-        <Image source={require('../assets/images/cardGraphicsLeft.png')} />
+        <Image source={require('../../assets/images/cardGraphicsLeft.png')} />
         <Text>Zenith U19</Text>
       </View>
     </View>

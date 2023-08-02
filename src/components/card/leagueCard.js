@@ -24,7 +24,7 @@ const style = StyleSheet.create({
 const LeagueCard = () => {
   return(
     <View style={style.container}>
-      <Image source={require('../assets/images/cardGraphicsLeft.png')} />
+      <Image source={require('../../assets/images/cardGraphicsLeft.png')} />
       <View style={{marginLeft: s(10)}}>
         <Text style={style.teamName}>Manchester United</Text>
         <Text style={style.country}>England</Text>
