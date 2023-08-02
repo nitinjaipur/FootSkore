@@ -1,8 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
-import Icon from 'react-native-vector-icons/Ionicons';
-import { LeagueCard } from '../index';
 
 const style = StyleSheet.create({
   main: {

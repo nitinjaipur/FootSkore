@@ -1,6 +1,5 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 
 const style = StyleSheet.create({

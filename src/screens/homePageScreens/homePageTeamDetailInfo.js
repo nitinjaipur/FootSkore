@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, ScrollView, Text, FlatList, Image, StyleSheet, StatusBar} from 'react-native';
+import { View, ScrollView, Text, StyleSheet, StatusBar} from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { SearchBox, FixtureCard, TeamCard, LiveCard, LeagueCard, InfoCard, InfoCoachCard, PlayerCard, StandingCard } from '../../components/index';

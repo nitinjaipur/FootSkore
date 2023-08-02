@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TouchableOpacity, TextInput, View, Text } from 'react-native';
+import { TextInput, View, Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 import { textStyle } from './style';

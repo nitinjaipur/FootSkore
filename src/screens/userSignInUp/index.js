@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { View, KeyboardAvoidingView, Text, StatusBar, Image, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { userSignInUpStyle, forgotPasswordStyle, verificationCodeStyle, resetPasswordStyle, passwordSuccessfullStyle, signUpStyle } from './style';
