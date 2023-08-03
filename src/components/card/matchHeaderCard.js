@@ -1,13 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
+import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   main: {
     height: s(135),
     width: '85%',
     borderRadius: 10,
-    backgroundColor: '#EBEBEB',
+    backgroundColor: themeDefault.colors.lightGray,
     marginTop: s(20),
     justifyContent: 'space-evenly',
     alignItems: 'center',
@@ -47,7 +48,7 @@ const style = StyleSheet.create({
   },
   centreDataText: {
     fontSize: s(11),
-    color: '#808797',
+    color: themeDefault.colors.darkGray,
     lineHeight: s(15)
   },
   score: {

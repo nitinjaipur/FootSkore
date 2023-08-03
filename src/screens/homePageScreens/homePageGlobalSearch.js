@@ -3,11 +3,12 @@ import { View, Text, StyleSheet} from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { SearchBox, FixtureCard, TeamCard, LiveCard, LeagueCard } from '../../components/index';
+import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: themeDefault.colors.white,
     marginTop: s(26)
   },
   headerMain: {
@@ -51,7 +52,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 10,
     marginTop: s(20),
-    backgroundColor: '#EBEBEB',
+    backgroundColor: themeDefault.colors.lightGray,
   },
   bodyMatchDT: {
     height: '20%',
@@ -73,21 +74,21 @@ const GlobalSearch = () => {
     <View style={style.container}>
       <View style={style.headerMain}>
         <View style={style.header}>
-          <Icon name="arrow-back-outline" size={s(21)} color='#808797' />
+          <Icon name="arrow-back-outline" size={s(21)} color={themeDefault.colors.darkGray} />
           <SearchBox />
         </View>
         <View style={style.options}>
-          <View style={ [style.optionView, { backgroundColor: card === "Fixture" ? '#E92742' : '#EBEBEB' }] }>
-            <Text style={{ fontWeight: '700', color: card === "Fixture" ? '#fff' : '#808797' }} onPress={() => { card !== 'Fixture' ? setCard('Fixture') : setCard('all') }} >Fixture</Text>
+          <View style={ [style.optionView, { backgroundColor: card === "Fixture" ? themeDefault.colors.red : themeDefault.colors.lightGray }] }>
+            <Text style={{ fontWeight: '700', color: card === "Fixture" ? themeDefault.colors.white : themeDefault.colors.darkGray }} onPress={() => { card !== 'Fixture' ? setCard('Fixture') : setCard('all') }} >Fixture</Text>
           </View>
-          <View style={ [style.optionView, { backgroundColor: card === "Team" ? '#E92742' : '#EBEBEB' }] }>
-            <Text style={{ fontWeight: '700', color: card === "Team" ? '#fff' : '#808797' }} onPress={() => { card !== 'Team' ? setCard('Team') : setCard('all') }}>Team</Text>
+          <View style={ [style.optionView, { backgroundColor: card === "Team" ? themeDefault.colors.red : themeDefault.colors.lightGray }] }>
+            <Text style={{ fontWeight: '700', color: card === "Team" ? themeDefault.colors.white : themeDefault.colors.darkGray }} onPress={() => { card !== 'Team' ? setCard('Team') : setCard('all') }}>Team</Text>
           </View>
-          <View style={ [style.optionView, { backgroundColor: card === "Live" ? '#E92742' : '#EBEBEB' }] }>
-            <Text style={{ fontWeight: '700', color: card === "Live" ? '#fff' : '#808797' }} onPress={() => { card !== 'Live' ? setCard('Live') : setCard('all') }}>Live</Text>
+          <View style={ [style.optionView, { backgroundColor: card === "Live" ? themeDefault.colors.red : themeDefault.colors.lightGray }] }>
+            <Text style={{ fontWeight: '700', color: card === "Live" ? themeDefault.colors.white : themeDefault.colors.darkGray }} onPress={() => { card !== 'Live' ? setCard('Live') : setCard('all') }}>Live</Text>
           </View>
-          <View style={ [style.optionView, { backgroundColor: card === "League" ? '#E92742' : '#EBEBEB' }] }>
-            <Text style={{ fontWeight: '700', color: card === "League" ? '#fff' : '#808797' }} onPress={() => { card !== 'League' ? setCard('League') : setCard('all') }}>League</Text>
+          <View style={ [style.optionView, { backgroundColor: card === "League" ? themeDefault.colors.red : themeDefault.colors.lightGray }] }>
+            <Text style={{ fontWeight: '700', color: card === "League" ? themeDefault.colors.white : themeDefault.colors.darkGray }} onPress={() => { card !== 'League' ? setCard('League') : setCard('all') }}>League</Text>
           </View>
         </View>
       </View>

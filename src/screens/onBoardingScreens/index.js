@@ -3,8 +3,9 @@ import { View, Text, StatusBar, Image } from 'react-native';
 import { s } from 'react-native-size-matters';
 import { SolidButton, HollowButton } from '../../components/index';
 import { onBoardingScreensStyle } from './style';
+import { themeDefault } from '../../theme/index';
 
-const Welcome1 = (props) => {
+const GetStarted = (props) => {
   return(
     <View style={onBoardingScreensStyle.Container}>
       <StatusBar hidden={true} />
@@ -18,13 +19,13 @@ const Welcome1 = (props) => {
         <Text style={onBoardingScreensStyle.detailText}>Never miss a goal - get live match alerts, fixtures and results for your favorite teams and competitions</Text>
       </View>
       <View style={onBoardingScreensStyle.buttonContainer}>
-        <SolidButton title='Get Started' backgroundColor='#E92742' textColor='#fff' onPress={() =>{props.navigation.navigate('Welcome2')}} />
+        <SolidButton title='Get Started' backgroundColor={themeDefault.colors.red} textColor={themeDefault.colors.white} onPress={() =>{props.navigation.navigate('Welcome2')}} />
       </View>
     </View>
   );
 }
 
-const Welcome2 = (props) => {
+const Welcome = (props) => {
   return(
     <View style={onBoardingScreensStyle.Container}>
       <StatusBar hidden={true} />
@@ -38,11 +39,11 @@ const Welcome2 = (props) => {
         <Text style={onBoardingScreensStyle.detailText}>We'd like to check that your prefrences and details are accurate</Text>
       </View>
       <View style={onBoardingScreensStyle.buttonContainerWelcome2}>
-        <SolidButton title='Sign In' backgroundColor='#E92742' textColor='#fff' onPress={() => {props.navigation.navigate('LogIn')}} />
-        <HollowButton title='Sign Up for FootSkore' backgroundColor='#fff' borderColor='#E92742' textColor='#000' onPress={() => {props.navigation.navigate('SignUp', {isVerified: false})}} />
+        <SolidButton title='Sign In' backgroundColor={themeDefault.colors.red} textColor={themeDefault.colors.white} onPress={() => {props.navigation.navigate('LogIn')}} />
+        <HollowButton title='Sign Up for FootSkore' backgroundColor={themeDefault.colors.white} borderColor={themeDefault.colors.red} textColor={themeDefault.colors.black} onPress={() => {props.navigation.navigate('SignUp', {isVerified: false})}} />
       </View>
     </View>
   );
 }
 
-export { Welcome1, Welcome2 };
+export { GetStarted, Welcome };

@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   main: {
@@ -11,14 +12,14 @@ const style = StyleSheet.create({
     marginTop: s(20),
     borderRadius: s(10),
     padding: s(10),
-    backgroundColor: '#EBEBEB',
+    backgroundColor: themeDefault.colors.lightGray,
     alignItems: 'center',
     justifyContent: 'space-between'
   },
   iconContainer: {
     width: s(40),
     height: s(40),
-    backgroundColor: '#C2C8CF',
+    backgroundColor: themeDefault.colors.steelGray,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: s(20)
@@ -58,7 +59,7 @@ const PlayerCard = () => {
         <Text>Age: </Text>
         <Text>22</Text>
       </Text>
-      <Icon name="checkmark-circle" size={s(21)} color='#1F8E4B' />
+      <Icon name="checkmark-circle" size={s(21)} color={themeDefault.colors.green} />
     </View>
   );
 };

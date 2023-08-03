@@ -2,13 +2,14 @@ import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
+import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   fixtureDetailCardStyle: {
     height: '50%',
     width: '100%',
     alignItems: 'center',
-    backgroundColor: '#EBEBEB',
+    backgroundColor: themeDefault.colors.lightGray,
     borderRadius: 5,
     borderColor: 'black',
   },
@@ -23,7 +24,7 @@ const style = StyleSheet.create({
     height: '50%',
     width: '90%',
     flexDirection: 'row',
-    borderBottomColor: '#808797',
+    borderBottomColor: themeDefault.colors.darkGray,
     borderBottomWidth: 1
   },
   cardDetails: {
@@ -64,7 +65,7 @@ const style = StyleSheet.create({
     width: '30%',
   },
   cardGraphicsCentreStatus: {
-    color: '#E92742',
+    color: themeDefault.colors.red,
     fontSize: s(15),
     fontWeight: 'bold'
   },
@@ -73,7 +74,7 @@ const style = StyleSheet.create({
     fontWeight: 'bold'
   },
   cardGraphicsCentreRadio: {
-    backgroundColor: '#F5DDE6',
+    backgroundColor: themeDefault.colors.lightPink,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-evenly',
@@ -82,7 +83,7 @@ const style = StyleSheet.create({
     height: s(25)
   },
   cardGraphicsCentreRadioText: {
-    color: '#E92742',
+    color: themeDefault.colors.red,
     fontSize: s(11),
   },
   cardTitleText: {
@@ -90,7 +91,7 @@ const style = StyleSheet.create({
     fontSize: s(10),
   },
   cardDetailsText : {
-    color: '#808797'
+    color: themeDefault.colors.darkGray
   }
 });
 
@@ -103,7 +104,7 @@ const FixtureDetailCard = (props) => {
           <Text style={style.cardTitleText}>UEFA Champion League</Text>
         </View>
         <View>
-          <Icon name='heart' color='#E92742' size={22} />
+          <Icon name='heart' color={themeDefault.colors.red} size={22} />
         </View>
       </View>
       <View style={style.cardGraphics}>
@@ -115,7 +116,7 @@ const FixtureDetailCard = (props) => {
         <View style={style.cardGraphicsCentre}>
           <Text style={style.cardGraphicsCentreStatus}>First Half</Text>
           <Text style={style.cardGraphicsCentreScore}>3 : 2</Text>
-          <View style={style.cardGraphicsCentreRadio}><Icon name='radio-button-on-outline' color='#E92742' size={15} /><Text style={style.cardGraphicsCentreRadioText}>68'</Text></View>
+          <View style={style.cardGraphicsCentreRadio}><Icon name='radio-button-on-outline' color={themeDefault.colors.red} size={15} /><Text style={style.cardGraphicsCentreRadioText}>68'</Text></View>
         </View>
         <View style={style.cardGraphicsRight}>
           <Icon name='airplane' size={22} />
@@ -178,7 +179,7 @@ const FixtureDetailCard = (props) => {
 //           <Text style={style.cardTitleText}>{props.leagueName}</Text>
 //         </View>
 //         <View>
-//           <Icon name='heart' color='#E92742' size={22} />
+//           <Icon name='heart' color={themeDefault.colors.red} size={22} />
 //         </View>
 //       </View>
 //       <View style={style.cardGraphics}>
@@ -190,7 +191,7 @@ const FixtureDetailCard = (props) => {
 //         <View style={style.cardGraphicsCentre}>
 //           <Text style={style.cardGraphicsCentreStatus}>{props.half}</Text>
 //           <Text style={style.cardGraphicsCentreScore}>3 : 2</Text>
-//           <View style={style.cardGraphicsCentreRadio}><Icon name='radio-button-on-outline' color='#E92742' size={15} /><Text style={style.cardGraphicsCentreRadioText}>68'</Text></View>
+//           <View style={style.cardGraphicsCentreRadio}><Icon name='radio-button-on-outline' color={themeDefault.colors.red} size={15} /><Text style={style.cardGraphicsCentreRadioText}>68'</Text></View>
 //         </View>    
 //         <View style={style.cardGraphicsRight}>
 //           <Icon name='airplane' size={22} />

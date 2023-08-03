@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import {s, vs, ms, mvs} from 'react-native-size-matters';
+import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   main: {
-    backgroundColor: '#F5DDE6',
+    backgroundColor: themeDefault.colors.lightPink,
     height: '5%',
     width: '20%',
     alignSelf: 'center',
@@ -15,7 +16,7 @@ const style = StyleSheet.create({
     marginBottom: s(10)
   },
   text: {
-    color: '#E92742'
+    color: themeDefault.colors.red
   }
 });
 

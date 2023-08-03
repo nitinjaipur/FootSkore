@@ -1,13 +1,14 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import {s, vs, ms, mvs} from 'react-native-size-matters';
+import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   container: {
     height: '35%',
     width: '100%',
     borderRadius: s(10),
-    backgroundColor: '#EBEBEB',
+    backgroundColor: themeDefault.colors.lightGray,
     padding: s(10),
     marginTop: s(20)
   },

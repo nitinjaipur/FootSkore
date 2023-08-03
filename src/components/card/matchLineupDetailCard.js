@@ -1,10 +1,11 @@
 import React from 'react';
 import {View, Text, StyleSheet, Image} from 'react-native';
 import {s, vs, ms, mvs} from 'react-native-size-matters';
+import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   main: {
-    backgroundColor: '#EBEBEB',
+    backgroundColor: themeDefault.colors.lightGray,
     height: '62%',
     width: '100%',
     flexDirection: 'row'

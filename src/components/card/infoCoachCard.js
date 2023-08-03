@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
+import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   main: {
@@ -10,7 +11,7 @@ const style = StyleSheet.create({
     marginTop: s(20),
     borderRadius: s(10),
     padding: s(10),
-    backgroundColor: '#EBEBEB'
+    backgroundColor: themeDefault.colors.lightGray
   },
   dataContainer: {
     flex: 2
@@ -29,7 +30,7 @@ const style = StyleSheet.create({
     width: '45%',
   },
   text: {
-    color: '#808797',
+    color: themeDefault.colors.darkGray,
   },
 });
 

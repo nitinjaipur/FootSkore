@@ -1,13 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
+import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   main: {
     height: '95%',
     width: '100%',
     borderRadius: s(10),
-    backgroundColor: '#EBEBEB',
+    backgroundColor: themeDefault.colors.lightGray,
     alignItems: 'center',
   },
   leagueContainer: {
@@ -22,7 +23,7 @@ const style = StyleSheet.create({
     height: '100%',
     width: '100%',
     borderBottomWidth: 1,
-    borderBottomColor: '#808797'
+    borderBottomColor: themeDefault.colors.darkGray
   },
   detail: {
     flex: 1,
@@ -39,7 +40,7 @@ const style = StyleSheet.create({
     width: '100%',
     justifyContent: 'space-around',
     borderBottomWidth: 1,
-    borderBottomColor: '#808797'
+    borderBottomColor: themeDefault.colors.darkGray
   },
   statusTitle: {
     marginLeft: s(15),
@@ -54,7 +55,7 @@ const style = StyleSheet.create({
     alignItems: 'center'
   },
   status: {
-    color: '#808797',
+    color: themeDefault.colors.darkGray,
     fontSize: s(13)
   },
   leagueTitle: {

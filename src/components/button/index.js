@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Text } from 'react-native';
 import { atomButtonStyle } from './styles';
+import { themeDefault } from '../../theme/index';
 
 const SolidButton = (props) => {
   return(
@@ -20,12 +21,10 @@ const HollowButton = (props) => {
 
 const DisabledButton = (props) => {
   return(
-    <TouchableOpacity disabled={true} style={[atomButtonStyle.solidButton, { backgroundColor: '#808797'}]}>
-      <Text style={[atomButtonStyle.buttonText, {color: '#fff'}]}>{ props.title }</Text>
+    <TouchableOpacity disabled={true} style={[atomButtonStyle.solidButton, { backgroundColor: themeDefault.colors.darkGray}]}>
+      <Text style={[atomButtonStyle.buttonText, {color: themeDefault.colors.white}]}>{ props.title }</Text>
     </TouchableOpacity>
   )
 }
-
-// atomButtonStyle.buttonText,
 
 export { SolidButton, HollowButton, DisabledButton };

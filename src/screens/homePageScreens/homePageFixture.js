@@ -3,6 +3,7 @@ import { View, Text, FlatList, StyleSheet} from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 import { FixtureDetailCard } from '../../components/index';
 import Icon from 'react-native-vector-icons/Ionicons';
+import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   mainContainer: {
@@ -53,7 +54,7 @@ const style = StyleSheet.create({
     borderRadius: s(10),
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#fff'
+    backgroundColor: themeDefault.colors.white
   }
 });
 

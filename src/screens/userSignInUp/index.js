@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { userSignInUpStyle, forgotPasswordStyle, verificationCodeStyle, resetPasswordStyle, passwordSuccessfullStyle, signUpStyle } from './style';
 import { SolidButton, HollowButton, DisabledButton, InfoInput, PasswordInput } from '../../components/index';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
-
+import { themeDefault } from '../../theme/index';
 
 const LogIn = (props) => {
   return(
@@ -28,8 +28,8 @@ const LogIn = (props) => {
           <Text style={{alignSelf: 'flex-end'}} onPress={() => {props.navigation.navigate('ForgotPassword')}}>Forgot Password</Text>
         </View>
         <View style={userSignInUpStyle.buttonContainer}>
-          <SolidButton title='Sign In' backgroundColor='#E92742' textColor='#fff' />
-          <SolidButton title='Login with Google' backgroundColor='#409CFF' textColor='#fff' />
+          <SolidButton title='Sign In' backgroundColor={themeDefault.colors.red} textColor={themeDefault.colors.white} />
+          <SolidButton title='Login with Google' backgroundColor={themeDefault.colors.blue} textColor={themeDefault.colors.white} />
         </View>
         <View style={userSignInUpStyle.emptyContainer}></View>
       </KeyboardAvoidingView>
@@ -55,7 +55,7 @@ const ForgotPassword = (props) => {
         <InfoInput title='Email' />
       </View>
       <View style={forgotPasswordStyle.buttonContainer}>
-        <SolidButton title='Submit' backgroundColor='#E92742' textColor='#fff' onPress={() =>{props.navigation.navigate('VerificationCode', {afterVarificationScreen: 'ResetPassword'})}} />
+        <SolidButton title='Submit' backgroundColor={themeDefault.colors.red} textColor={themeDefault.colors.white} onPress={() =>{props.navigation.navigate('VerificationCode', {afterVarificationScreen: 'ResetPassword'})}} />
       </View>
       <View style={forgotPasswordStyle.emptyContainer}></View>
     </KeyboardAvoidingView>
@@ -81,7 +81,7 @@ const VerificationCode = (props) => {
           <View style={verificationCodeStyle.otpView}><TextInput placeholder='0' maxLength={1} style={verificationCodeStyle.otpText} /></View>
         </View>
         <View style={verificationCodeStyle.buttonContainer}>
-          <SolidButton title='Verify' backgroundColor='#E92742' textColor='#fff' onPress={() =>{props.navigation.navigate(props.route.params.afterVarificationScreen, {isVerified: true})}} />
+          <SolidButton title='Verify' backgroundColor={themeDefault.colors.red} textColor={themeDefault.colors.white} onPress={() =>{props.navigation.navigate(props.route.params.afterVarificationScreen, {isVerified: true})}} />
           <View style={verificationCodeStyle.buttonContainerDetailView}>
             <Text style={verificationCodeStyle.detailText}>Sent to registered Email</Text>
           </View>
@@ -111,7 +111,7 @@ const ResetPassword = (props) => {
         <PasswordInput title='Confirm Password' />
       </View>
       <View style={resetPasswordStyle.buttonContainer}>
-        <SolidButton title='Save' backgroundColor='#E92742' textColor='#fff' onPress={() =>{props.navigation.navigate('PasswordSuccessfull')}} />
+        <SolidButton title='Save' backgroundColor={themeDefault.colors.red} textColor={themeDefault.colors.white} onPress={() =>{props.navigation.navigate('PasswordSuccessfull')}} />
       </View>
       <View style={resetPasswordStyle.emptyContainer}></View>
     </KeyboardAvoidingView>
@@ -130,7 +130,7 @@ const PasswordSuccessfull = (props) => {
           <Text style={passwordSuccessfullStyle.textHeading}>PASSWORD RESET SUCCESSFULLY</Text>
         </View>
         <View style={passwordSuccessfullStyle.buttonContainer}>
-          <SolidButton title='Back to Sign In' backgroundColor='#E92742' textColor='#fff' onPress={() =>{props.navigation.navigate('LogIn')}} />
+          <SolidButton title='Back to Sign In' backgroundColor={themeDefault.colors.red} textColor={themeDefault.colors.white} onPress={() =>{props.navigation.navigate('LogIn')}} />
         </View>
         <View style={{flex: 4}}></View>
       </View>
@@ -157,7 +157,7 @@ const SignUp = (props) => {
           { isVerified == false ?
               <Text style={[{alignSelf: 'flex-end'}, verificationCodeStyle.footerTextLink]} onPress={() => {props.navigation.navigate('VerificationCode', {afterVarificationScreen: 'SignUp'})}}>Verify</Text>
               :
-              <Text style={[{alignSelf: 'flex-end', color: '#1F8E4B', textDecorationLine: 'underline', fontWeight: '600'}]} >Verified</Text>
+              <Text style={[{alignSelf: 'flex-end', color: themeDefault.colors.green, textDecorationLine: 'underline', fontWeight: '600'}]} >Verified</Text>
           }
           </View>
         <InfoInput editable={!isVerified} title='Email' />
@@ -169,7 +169,7 @@ const SignUp = (props) => {
       { isVerified == false ?
         <DisabledButton title='Sign Up' />
         :
-        <SolidButton title='Sign Up' backgroundColor='#E92742' textColor='#fff' />
+        <SolidButton title='Sign Up' backgroundColor={themeDefault.colors.red} textColor={themeDefault.colors.white} />
       }
       </View>
       <View style={signUpStyle.emptyContainer}></View>

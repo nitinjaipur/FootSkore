@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
+import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   container: {
@@ -10,7 +11,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
-    backgroundColor: '#EBEBEB',
+    backgroundColor: themeDefault.colors.lightGray,
     flexDirection: 'row',
   },
   left: {
@@ -27,7 +28,7 @@ const style = StyleSheet.create({
     alignSelf: 'center'
   },
   centreStatus: {
-    color: '#E92742',
+    color: themeDefault.colors.red,
     fontSize: s(15),
     fontWeight: 'bold'
   },
@@ -36,7 +37,7 @@ const style = StyleSheet.create({
     fontWeight: 'bold'
   },
   centreRadio: {
-    backgroundColor: '#F5DDE6',
+    backgroundColor: themeDefault.colors.lightPink,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-evenly',
@@ -45,7 +46,7 @@ const style = StyleSheet.create({
     height: s(25)
   },
   centreRadioText: {
-    color: '#E92742',
+    color: themeDefault.colors.red,
     fontSize: s(11),
   },
   right: {
@@ -67,7 +68,7 @@ const FixtureCard = () => {
       <View style={style.centre}>
         <Text style={style.centreStatus}>First Half</Text>
         <Text style={style.bodyMatchBodyCentreScore}>3 : 2</Text>
-        <View style={style.centreRadio}><Icon name='radio-button-on-outline' color='#E92742' size={15} />
+        <View style={style.centreRadio}><Icon name='radio-button-on-outline' color={themeDefault.colors.red} size={15} />
           <Text style={style.centreRadioText}>68'</Text>
         </View>
       </View>

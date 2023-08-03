@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import { s, vs, ms, mvs } from 'react-native-size-matters';
+import { themeDefault } from '../../theme/index';
 
 const onBoardingScreensStyle = StyleSheet.create({
   Container: {
@@ -32,7 +33,7 @@ const onBoardingScreensStyle = StyleSheet.create({
   },
   detailText: {
     textAlign: 'center',
-    color: '#808797',
+    color: themeDefault.colors.darkGray,
     fontSize: s(13),
     lineHeight: s(24)
   },

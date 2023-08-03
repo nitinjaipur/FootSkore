@@ -1,13 +1,14 @@
 import React from 'react';
 import { Text, View, StyleSheet, Image } from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
+import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   container: {
     height: '9%',
     width: '85%',
     borderRadius: 10,
-    backgroundColor: '#EBEBEB',
+    backgroundColor: themeDefault.colors.lightGray,
     marginTop: s(20),
     alignItems: 'center',
     flexDirection: 'row'
@@ -17,7 +18,7 @@ const style = StyleSheet.create({
   },
   country: {
     margin: s(2),
-    color: '#808797',
+    color: themeDefault.colors.darkGray,
   },
 });
 

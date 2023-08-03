@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 import { s, vs, ms, mvs } from 'react-native-size-matters';
+import { themeDefault } from '../../theme/index';
 
 const userSignInUpStyle = StyleSheet.create({
   wrapperView: {
@@ -21,7 +22,6 @@ const userSignInUpStyle = StyleSheet.create({
   footerContainer: {
     justifyContent: 'center',
     alignItems: 'center',
-    // height: s(86),
     height: '15%',
   },
   textContainer: {
@@ -35,7 +35,7 @@ const userSignInUpStyle = StyleSheet.create({
     fontWeight: '800'
   },
   detailText: {
-    color: '#808797',
+    color: themeDefault.colors.darkGray,
     fontSize: s(14),
     lineHeight: s(24),
   },
@@ -46,8 +46,6 @@ const userSignInUpStyle = StyleSheet.create({
     width: '85%',
     marginTop: s(10),
     marginBottom: s(6),
-    // marginLeft: 25,
-    // marginRight: 25,
   },
   buttonContainer: {
     flex: 2,
@@ -61,7 +59,7 @@ const userSignInUpStyle = StyleSheet.create({
     fontSize: s(14)
   },
   footerTextLink: {
-    color:'#E92742',
+    color:themeDefault.colors.red,
     textDecorationLine: 'underline',
     fontWeight: '600'
   }
@@ -82,7 +80,7 @@ const forgotPasswordStyle = StyleSheet.create({
     fontWeight: '800'
   },
   detailText: {
-    color: '#808797',
+    color: themeDefault.colors.darkGray,
     fontSize: s(14),
     lineHeight: s(24)
   },
@@ -90,8 +88,6 @@ const forgotPasswordStyle = StyleSheet.create({
     justifyContent: 'flex-end',
     alignSelf: 'center',
     width: '85%',
-    // marginLeft: 25,
-    // marginRight: 25,
     marginTop: s(22),
     marginBottom: s(8)
   },
@@ -123,7 +119,7 @@ const verificationCodeStyle = StyleSheet.create({
     fontWeight: '800'
   },
   detailText: {
-    color: '#808797',
+    color: themeDefault.colors.darkGray,
     fontSize: s(14),
     lineHeight: s(24)
   },
@@ -133,11 +129,11 @@ const verificationCodeStyle = StyleSheet.create({
     height: s(95)
   },
   footerText: {
-    color:'#808797',
+    color: themeDefault.colors.darkGray,
     fontSize: s(14)
   },
   footerTextLink: {
-    color:'#E92742',
+    color: themeDefault.colors.red,
     textDecorationLine: 'underline',
     fontWeight: '600'
   },
@@ -146,8 +142,6 @@ const verificationCodeStyle = StyleSheet.create({
     justifyContent: 'space-evenly',
     alignSelf: 'center',
     width: '70%',
-    // marginLeft: 55,
-    // marginRight: 55,
     marginTop: s(22),
     flexDirection: 'row',
     alignItems: 'center',
@@ -161,13 +155,13 @@ const verificationCodeStyle = StyleSheet.create({
     height: s(56),
     width: s(43),
     borderRadius: s(8),
-    backgroundColor: '#e6e6e6'
+    backgroundColor: themeDefault.colors.backGround
   },
   otpText: {
     flex:1,
     fontSize: s(26),
     textAlign: 'center',
-    color: '#737373'
+    color: themeDefault.colors.otp
   },
   buttonContainerDetailView: {
     justifyContent: 'flex-start',
@@ -191,7 +185,7 @@ const resetPasswordStyle = StyleSheet.create({
     fontWeight: '800'
   },
   detailText: {
-    color: '#808797',
+    color: themeDefault.colors.darkGray,
     fontSize: s(14),
     lineHeight: s(24)
   },
@@ -251,7 +245,7 @@ const signUpStyle = StyleSheet.create({
     fontWeight: '800'
   },
   detailText: {
-    color: '#808797',
+    color: themeDefault.colors.darkGray,
     fontSize: s(14),
     lineHeight: s(24)
   },
@@ -272,7 +266,5 @@ const signUpStyle = StyleSheet.create({
     marginTop: s(8)
   }
 });
-
-
 
 export { userSignInUpStyle, forgotPasswordStyle, verificationCodeStyle, resetPasswordStyle, passwordSuccessfullStyle, signUpStyle };

@@ -1,13 +1,14 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import {s, vs, ms, mvs} from 'react-native-size-matters';
+import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   main: {
     height: '20%',
     width: '100%',
     borderRadius: s(10),
-    backgroundColor: '#EBEBEB',
+    backgroundColor: themeDefault.colors.lightGray,
     padding: s(15),
     flexDirection: 'row',
     alignItems: 'center'
@@ -20,7 +21,7 @@ const style = StyleSheet.create({
     rowGap: s(6)
   },
   text: {
-    color: '#808797',
+    color: themeDefault.colors.darkGray,
   },
 });
 
