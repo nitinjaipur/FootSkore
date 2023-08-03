@@ -23,8 +23,8 @@ const onBoardingScreensStyle = StyleSheet.create({
     marginBottom: s(17)
   },
   headerText: {
-    fontSize: s(26),
-    fontWeight: '800',
+    fontSize: s(34),
+    fontFamily: themeDefault.fonts.TekoSemiBold
   },
   detailContainer: {
     alignItems: 'center',

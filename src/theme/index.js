@@ -14,6 +14,24 @@ const themeDefault = {
     backGround: '#e6e6e6',
     otp: '#737373'
   },
+
+  fonts: {
+    'InterBlack': "Inter-Black",
+    'InterBold': "Inter-Bold",
+    'InterExtraBold': "Inter-ExtraBold",
+    'InterExtraLight': "Inter-ExtraLight",
+    'InterLight': "Inter-Light",
+    'InterMedium': "Inter-Medium",
+    'InterRegular': "Inter-Regular",
+    'InterSemiBold': "Inter-SemiBold",
+    'InterThin': "Inter-Thin",
+    'InterVariableFont': "Inter-VariableFont_slnt,wght",
+    'TekoBold': "Teko-Bold",
+    'TekoLight': "Teko-Light",
+    'TekoMedium': "Teko-Medium",
+    'TekoRegular': "Teko-Regular",
+    'TekoSemiBold': "Teko-SemiBold"
+  }
 };
 
 export { themeDefault };

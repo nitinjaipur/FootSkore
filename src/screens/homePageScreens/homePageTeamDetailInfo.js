@@ -22,8 +22,8 @@ const style = StyleSheet.create({
   },
   heading: {
     color: themeDefault.colors.white,
-    fontSize: s(16),
-    fontWeight: '900'
+    fontSize: s(24),
+    fontFamily: themeDefault.fonts.TekoSemiBold
   },
   overlapView: {
     zIndex: 1,

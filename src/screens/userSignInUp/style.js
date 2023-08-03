@@ -31,8 +31,8 @@ const userSignInUpStyle = StyleSheet.create({
     alignSelf: 'flex-end'
   },
   textHeading: {
-    fontSize: s(26),
-    fontWeight: '800'
+    fontSize: s(30),
+    fontFamily: themeDefault.fonts.TekoBold
   },
   detailText: {
     color: themeDefault.colors.darkGray,
@@ -76,8 +76,8 @@ const forgotPasswordStyle = StyleSheet.create({
     marginLeft: s(21)
   },
   textHeading: {
-    fontSize: s(26),
-    fontWeight: '800'
+    fontSize: s(30),
+    fontFamily: themeDefault.fonts.TekoBold
   },
   detailText: {
     color: themeDefault.colors.darkGray,
@@ -115,8 +115,8 @@ const verificationCodeStyle = StyleSheet.create({
     marginLeft: s(21)
   },
   textHeading: {
-    fontSize: s(26),
-    fontWeight: '800'
+    fontSize: s(30),
+    fontFamily: themeDefault.fonts.TekoBold
   },
   detailText: {
     color: themeDefault.colors.darkGray,
@@ -181,8 +181,8 @@ const resetPasswordStyle = StyleSheet.create({
     marginLeft: s(21),
   },
   textHeading: {
-    fontSize: s(26),
-    fontWeight: '800'
+    fontSize: s(30),
+    fontFamily: themeDefault.fonts.TekoBold
   },
   detailText: {
     color: themeDefault.colors.darkGray,
@@ -221,8 +221,8 @@ const passwordSuccessfullStyle = StyleSheet.create({
     marginLeft: s(21)
   },
   textHeading: {
-    fontSize: s(26),
-    fontWeight: '800'
+    fontSize: s(30),
+    fontFamily: themeDefault.fonts.TekoBold
   },
   buttonContainer: {
     flex: 2,
@@ -241,8 +241,8 @@ const signUpStyle = StyleSheet.create({
     marginTop: s(17)
   },
   textHeading: {
-    fontSize: s(26),
-    fontWeight: '800'
+    fontSize: s(30),
+    fontFamily: themeDefault.fonts.TekoBold
   },
   detailText: {
     color: themeDefault.colors.darkGray,

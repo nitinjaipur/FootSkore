@@ -19,7 +19,7 @@ const GetStarted = (props) => {
         <Text style={onBoardingScreensStyle.detailText}>Never miss a goal - get live match alerts, fixtures and results for your favorite teams and competitions</Text>
       </View>
       <View style={onBoardingScreensStyle.buttonContainer}>
-        <SolidButton title='Get Started' backgroundColor={themeDefault.colors.red} textColor={themeDefault.colors.white} onPress={() =>{props.navigation.navigate('Welcome2')}} />
+        <SolidButton title='Get Started' backgroundColor={themeDefault.colors.red} textColor={themeDefault.colors.white} onPress={() =>{props.navigation.navigate('Welcome')}} />
       </View>
     </View>
   );
