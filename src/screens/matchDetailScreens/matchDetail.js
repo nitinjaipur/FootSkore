@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, ScrollView, Text, FlatList, Image, StyleSheet, StatusBar} from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { SearchBox, FixtureCard, TeamCard, LiveCard, LeagueCard, InfoCard, InfoCoachCard, PlayerCard, StandingCard, MatchHeaderCard, MatchInfoCard, MatchInfoLeagueCard, MatchEventCard, MatchTeamCard, MatchLineupScoreCard, MatchLineupDetailCard } from '../../components/index';
+import { SearchBox, FixtureCard, TeamCard, LiveCard, LeagueCard, InfoCard, InfoCoachCard, PlayerCard, StandingCard, MatchHeaderCard, MatchInfoCard, MatchInfoLeagueCard, MatchEventCard, MatchTeamCard, MatchLineupScoreCard, MatchLineupDetailCard, MatchStaticsDetailCard } from '../../components/index';
 import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
@@ -98,7 +98,7 @@ const MatchDetail = () => {
           <View style={style.cardContainer}>
             <MatchTeamCard />
             <MatchLineupScoreCard />
-            <MatchLineupDetailCard />
+            <MatchStaticsDetailCard />
           </View>
 
         </View>

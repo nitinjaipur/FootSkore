@@ -8,7 +8,7 @@ const Stack = createNativeStackNavigator();
 const HomePageNavigator = () => {
   return(
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='TeamDetailInfo' screenOptions={{ headerShown: false }}>
+      <Stack.Navigator initialRouteName='MatchDetail' screenOptions={{ headerShown: false }}>
         <Stack.Screen name='Fixture' component={Fixture} />
         <Stack.Screen name='GlobalSearch' component={GlobalSearch} />
         <Stack.Screen name='TeamDetailInfo' component={TeamDetailInfo} />
