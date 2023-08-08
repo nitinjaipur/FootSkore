@@ -70,5 +70,4 @@ const MultiProgressBar = () => {
   );
 };
 
-
 export {MultiProgressBar};
