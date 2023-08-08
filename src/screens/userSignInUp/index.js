@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { View, KeyboardAvoidingView, Text, StatusBar, Image, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { userSignInUpStyle, forgotPasswordStyle, verificationCodeStyle, resetPasswordStyle, passwordSuccessfullStyle, signUpStyle } from './style';
@@ -63,6 +63,11 @@ const ForgotPassword = (props) => {
 }
 
 const VerificationCode = (props) => {
+
+  const otpA = useRef();
+  const otpB = useRef();
+  const otpC = useRef();
+
   return(
     <View style={verificationCodeStyle.wrapperView}>
       <StatusBar hidden={false} />
@@ -75,10 +80,10 @@ const VerificationCode = (props) => {
           <Text style={verificationCodeStyle.detailText}>Please enter 4 digit code</Text>
         </View>
         <View style={verificationCodeStyle.inputContainer}>
-          <View style={verificationCodeStyle.otpView}><TextInput placeholder='0' maxLength={1} style={verificationCodeStyle.otpText} /></View>
-          <View style={verificationCodeStyle.otpView}><TextInput placeholder='0' maxLength={1} style={verificationCodeStyle.otpText} /></View>
-          <View style={verificationCodeStyle.otpView}><TextInput placeholder='0' maxLength={1} style={verificationCodeStyle.otpText} /></View>
-          <View style={verificationCodeStyle.otpView}><TextInput placeholder='0' maxLength={1} style={verificationCodeStyle.otpText} /></View>
+          <View style={verificationCodeStyle.otpView}><TextInput placeholder='0' maxLength={1} onSubmitEditing={() => {otpA.current.focus();}} style={verificationCodeStyle.otpText} /></View>
+          <View style={verificationCodeStyle.otpView}><TextInput placeholder='0' maxLength={1} ref={otpA} onSubmitEditing={() => {otpB.current.focus();}} style={verificationCodeStyle.otpText} /></View>
+          <View style={verificationCodeStyle.otpView}><TextInput placeholder='0' maxLength={1} ref={otpB} onSubmitEditing={() => {otpC.current.focus();}} style={verificationCodeStyle.otpText} /></View>
+          <View style={verificationCodeStyle.otpView}><TextInput placeholder='0' maxLength={1} ref={otpC} style={verificationCodeStyle.otpText} /></View>
         </View>
         <View style={verificationCodeStyle.buttonContainer}>
           <SolidButton title='Verify' backgroundColor={themeDefault.colors.red} textColor={themeDefault.colors.white} onPress={() =>{props.navigation.navigate(props.route.params.afterVarificationScreen, {isVerified: true})}} />

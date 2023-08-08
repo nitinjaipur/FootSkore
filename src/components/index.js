@@ -19,5 +19,6 @@ import { MatchLineupScoreCard } from './card/matchLineupScoreCard';
 import { MatchLineupDetailCard } from './card/matchLineupDetailCard';
 import { MatchStaticsDetailCard } from './card/matchStaticsDetailCard';
 import { SimpleProgressBar } from './progressBars/simpleProgressBar';
+import { MultiProgressBar } from './progressBars/multiProgressBar';
 
-export { SolidButton, HollowButton, InfoInput, PasswordInput, DisabledButton, FixtureDetailCard, SearchBox, FixtureCard, TeamCard, LiveCard, LeagueCard, InfoCard, InfoCoachCard, PlayerCard, StandingCard, MatchHeaderCard, MatchInfoCard, MatchInfoLeagueCard, MatchEventCard, MatchTeamCard, MatchLineupScoreCard, MatchLineupDetailCard, MatchStaticsDetailCard, SimpleProgressBar };
+export { SolidButton, HollowButton, InfoInput, PasswordInput, DisabledButton, FixtureDetailCard, SearchBox, FixtureCard, TeamCard, LiveCard, LeagueCard, InfoCard, InfoCoachCard, PlayerCard, StandingCard, MatchHeaderCard, MatchInfoCard, MatchInfoLeagueCard, MatchEventCard, MatchTeamCard, MatchLineupScoreCard, MatchLineupDetailCard, MatchStaticsDetailCard, SimpleProgressBar, MultiProgressBar };
