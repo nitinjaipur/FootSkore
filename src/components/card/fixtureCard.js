@@ -7,22 +7,21 @@ import { themeDefault } from '../../theme/index';
 const style = StyleSheet.create({
   container: {
     height: s(120),
-    width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 10,
     backgroundColor: themeDefault.colors.lightGray,
-    flexDirection: 'row',
+    flexDirection: 'row'
   },
   left: {
     height: '95%',
-    width: '25%',
+    width: s(74),
     justifyContent: 'space-evenly',
-    alignItems: 'center',
+    alignItems: 'center'
   },
   centre: {
     height: '85%',
-    width: '50%',
+    width: s(145),
     justifyContent: 'space-evenly',
     alignItems: 'center',
     alignSelf: 'center'
@@ -47,14 +46,14 @@ const style = StyleSheet.create({
   },
   centreRadioText: {
     color: themeDefault.colors.red,
-    fontSize: s(11),
+    fontSize: s(11)
   },
   right: {
     height: '95%',
-    width: '25%',
+    width: s(74),
     justifyContent: 'space-evenly',
     alignItems: 'center'
-  },
+  }
 });
 
 const FixtureCard = () => {

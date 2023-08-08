@@ -97,7 +97,7 @@ const MatchDetail = () => {
 
           <View style={style.cardContainer}>
             <MatchTeamCard />
-            <MultiProgressBar />
+            <SimpleProgressBar />
           </View>
 
         </View>

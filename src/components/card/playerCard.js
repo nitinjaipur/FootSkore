@@ -7,14 +7,12 @@ import { themeDefault } from '../../theme/index';
 const style = StyleSheet.create({
   main: {
     flexDirection: 'row',
-    height: '13%',
-    width: '100%',
-    marginTop: s(20),
+    height: s(70),
     borderRadius: s(10),
-    padding: s(10),
     backgroundColor: themeDefault.colors.lightGray,
     alignItems: 'center',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    padding: s(15)
   },
   iconContainer: {
     width: s(40),
@@ -26,11 +24,9 @@ const style = StyleSheet.create({
   },
   textContainer: {
     justifyContent: 'space-evenly',
-    height: '100%'
   },
   empty: {
-    width: '15%',
-    height: '100%'
+    width: s(45),
   },
   name: {
     fontWeight: 'bold',

@@ -20,16 +20,20 @@ const style = StyleSheet.create({
     flexDirection: 'row',
   },
   left: {
-    borderWidth: s(3),
+    borderWidth: s(1),
     borderRadius: s(5),
     width: `${x}%`,
+    height: s(4),
     borderColor: themeDefault.colors.green,
+    backgroundColor: themeDefault.colors.green
   },
   right: {
-    borderWidth: s(3),
+    borderWidth: s(1),
     borderRadius: s(5),
     width: `${100-x}%`,
-    borderColor: themeDefault.colors.lightGray
+    height: s(4),
+    borderColor: themeDefault.colors.lightGray,
+    backgroundColor: themeDefault.colors.lightGray
   }
 });
 

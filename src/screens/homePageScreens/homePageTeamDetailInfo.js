@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, ScrollView, Text, StyleSheet, StatusBar} from 'react-native';
+import { View, ScrollView, Text, StyleSheet, StatusBar, FlatList} from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { SearchBox, FixtureCard, TeamCard, LiveCard, LeagueCard, InfoCard, InfoCoachCard, PlayerCard, StandingCard } from '../../components/index';
@@ -53,12 +53,63 @@ const style = StyleSheet.create({
   },
   cardContainer: {
     marginTop: s(25),
-    flex: 1
+    flex: 1,
   }
 });
 
+const listData = [
+  {
+    id: '7',
+    title: 'Sunday',
+  },
+  {
+    id: '8',
+    title: 'Monday',
+  },
+  {
+    id: '9',
+    title: 'Tuesday',
+  },
+  {
+    id: '10',
+    title: 'Wednesday',
+  },
+  {
+    id: '11',
+    title: 'Thursday',
+  },
+  {
+    id: '12',
+    title: 'Friday',
+  },
+  {
+    id: '14',
+    title: 'Saturday',
+  },
+  {
+    id: '15',
+    title: 'Sunday',
+  },
+  {
+    id: '16',
+    title: 'Saturday',
+  },
+  {
+    id: '17',
+    title: 'Saturday',
+  },
+  {
+    id: '18',
+    title: 'Saturday',
+  },
+  {
+    id: '19',
+    title: 'Saturday',
+  },
+];
+
 const TeamDetailInfo = () => {
-  const [option, setOption] = useState('Info');
+  const [option, setOption] = useState('Player');
   return(
     <ScrollView contentContainerStyle={style.main}>
       <StatusBar barStyle='light-content' />
@@ -92,9 +143,23 @@ const TeamDetailInfo = () => {
                 <InfoCoachCard />
               </>:
               option === 'Fixture' ?
-              <FixtureCard />:
+              <FlatList 
+                data={listData}
+                renderItem={({item}) => {
+                  return(<FixtureCard />);
+                }}
+                ItemSeparatorComponent={<View style={{height: s(20)}} />}
+              />:
               option === 'Player' ?
-              <PlayerCard />:
+              
+              <FlatList 
+                data={listData}
+                renderItem={({item}) => {
+                  return(<PlayerCard />);
+                }}
+                ItemSeparatorComponent={<View style={{height: s(20)}} />}
+              />
+              :
               <StandingCard />
             }
           </View>

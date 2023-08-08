@@ -133,8 +133,16 @@ const Fixture = () => {
         </View>
       </View>
       <View style={style.flatListContainer}>
-        <View style={{ height: '100%', width: '100%', justifyContent: 'flex-start', alignItems: 'center'}}>
-          <FixtureDetailCard />
+        <View >
+          <FlatList
+            data={calendarData}
+            renderItem={
+              ({item}) => {
+                return(<FixtureDetailCard />);
+              }
+            }
+            ItemSeparatorComponent={<View style={{height: s(20)}} />}
+          />
         </View>
       </View>
     </ View>
