@@ -13,7 +13,7 @@ const myStyle = StyleSheet.create({
 })
 
 function App(): JSX.Element {
-  
+
   useEffect(() => {
     setTimeout(RNBootSplash.hide, 3000)
   }, [])

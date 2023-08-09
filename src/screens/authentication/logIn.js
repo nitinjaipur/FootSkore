@@ -55,10 +55,10 @@ const style = StyleSheet.create({
     justifyContent: 'space-evenly'
   },
   emptyContainer: {
-    height: '30%'
+    height: s(165)
   },
   footerText: {
-    color:'#808797',
+    color:themeDefault.colors.darkGray,
     fontSize: s(14)
   },
   footerTextLink: {
