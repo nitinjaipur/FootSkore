@@ -24,13 +24,12 @@ const style = StyleSheet.create({
   },
   options: {
     flex: 0.5,
-    width: '85%',
     alignSelf: 'center',
     flexDirection: 'row',
     width: '70%',
     alignSelf: 'center',
     marginLeft: s(40),
-    alignItems: 'center',
+    alignItems: 'center'
   },
   body: {
     flex: 10,
@@ -47,19 +46,19 @@ const style = StyleSheet.create({
     padding: s(5)
   },
   bodyMatch: {
-    height: '23%',
+    height: s(155),
     width: '85%',
     alignItems: 'center',
     borderRadius: 10,
     marginTop: s(20),
-    backgroundColor: themeDefault.colors.lightGray,
+    backgroundColor: themeDefault.colors.lightGray
   },
   bodyMatchDT: {
-    height: '20%',
+    height: s(30),
     width: '90%',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-between'
   },
   bodyMatchDTText: {
     fontWeight: '600',

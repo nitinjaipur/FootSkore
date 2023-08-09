@@ -5,7 +5,7 @@ import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   container: {
-    height: '26%',
+    height: s(165),
     width: '85%',
     borderRadius: 10,
     backgroundColor: themeDefault.colors.lightGray,
@@ -15,7 +15,7 @@ const style = StyleSheet.create({
   header: {
     borderBottomWidth: 1,
     borderBottomColor: themeDefault.colors.darkGray,
-    height: '30%',
+    height: s(50),
     width: '90%',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -27,20 +27,20 @@ const style = StyleSheet.create({
     alignItems: 'center'
   },
   body: {
-    height: '70%',
+    height: s(117),
     width: '90%',
     flexDirection: 'row',
     justifyContent: 'space-around',
     alignItems: 'center'
   },
   teams: {
-    height: '90%',
+    height: s(104),
     width: '80%',
     justifyContent: 'center',
     alignItems: 'center'
   },
   teamsLive: {
-    height: '50%',
+    height: s(52),
     width: '90%',
     flexDirection: 'row',
     alignItems: 'center'
@@ -49,7 +49,8 @@ const style = StyleSheet.create({
     flexDirection: 'row',
     marginLeft: s(10),
     flex: 1,
-    justifyContent: 'space-between'},
+    justifyContent: 'space-between'
+  }
 });
 
 const LiveCard = () => {
@@ -61,7 +62,7 @@ const LiveCard = () => {
           <Text>UEFA Champion League</Text>
         </View>
         <Text style={{color: themeDefault.colors.darkGray}}>USA</Text>
-      </View>
+      </View>    
       <View style={style.body}>
         <Text style={{color: themeDefault.colors.red, fontSize: s(12), fontWeight: '600'}}>68'</Text>
         <View style={style.teams}>

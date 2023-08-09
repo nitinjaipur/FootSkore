@@ -5,7 +5,7 @@ import { themeDefault } from '../../theme/index';
 
 const style = StyleSheet.create({
   container: {
-    height: '9%',
+    height: s(58),
     width: '85%',
     borderRadius: 10,
     backgroundColor: themeDefault.colors.lightGray,
@@ -19,7 +19,7 @@ const style = StyleSheet.create({
   country: {
     margin: s(2),
     color: themeDefault.colors.darkGray,
-  },
+  }
 });
 
 const LeagueCard = () => {

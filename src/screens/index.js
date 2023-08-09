@@ -1,8 +1,14 @@
-import { GetStarted, Welcome } from './onBoardingScreens/index';
-import { LogIn, ForgotPassword, VerificationCode, ResetPassword, PasswordSuccessfull, SignUp } from './userSignInUp/index';
-import { TeamDetailInfo } from './homePageScreens/homePageTeamDetailInfo';
-import { Fixture } from './homePageScreens/homePageFixture';
-import { GlobalSearch } from './homePageScreens/homePageGlobalSearch';
-import { MatchDetail } from './matchDetailScreens/matchDetail';
+import { GetStarted } from './onBoarding/getStarted';
+import { Welcome } from './onBoarding/welcome';
+import { LogIn } from './authentication/logIn' ;
+import { ForgotPassword } from './authentication/forgotPassword';
+import { VerificationCode } from './authentication/verificationCode';
+import { ResetPassword } from './authentication/resetPassword'
+import { PasswordSuccessfull } from './authentication/passwordSuccessfull';
+import { SignUp } from './authentication/signUp';
+import { TeamDetailInfo } from './homePage/teamDetailInfo';
+import { Fixture } from './homePage/fixture';
+import { GlobalSearch } from './homePage/globalSearch';
+import { MatchDetail } from './matchDetail/matchDetail';
 
 export { GetStarted, Welcome, LogIn, ForgotPassword, VerificationCode, ResetPassword, PasswordSuccessfull, SignUp, Fixture, GlobalSearch, TeamDetailInfo, MatchDetail };
