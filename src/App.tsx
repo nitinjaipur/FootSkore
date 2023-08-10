@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { OnBoardingNavigator } from './navigation/onBoardingNavigator';
-import { HomePageNavigator } from './navigation/homePageNavigator';
+import 'react-native-gesture-handler';
+import { HomePageNavigator, OnBoardingNavigator, DrawerNavigator } from './navigation/index';
 import { View, Text, StyleSheet, SafeAreaView } from 'react-native';
 import RNBootSplash from "react-native-bootsplash";
 
@@ -20,7 +20,7 @@ function App(): JSX.Element {
 
   return (
     <>
-      <OnBoardingNavigator/>
+      <DrawerNavigator/>
     </>
   );
 }

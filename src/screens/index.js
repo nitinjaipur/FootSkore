@@ -10,5 +10,8 @@ import { TeamDetailInfo } from './homePage/teamDetailInfo';
 import { Fixture } from './homePage/fixture';
 import { GlobalSearch } from './homePage/globalSearch';
 import { MatchDetail } from './matchDetail/matchDetail';
+import { Profile } from './sideDrawer/profile';
+import { Settings } from './sideDrawer/settings/settings';
+import { NotificationSettings } from './sideDrawer/settings/notificationSetting';
 
-export { GetStarted, Welcome, LogIn, ForgotPassword, VerificationCode, ResetPassword, PasswordSuccessfull, SignUp, Fixture, GlobalSearch, TeamDetailInfo, MatchDetail };
+export { GetStarted, Welcome, LogIn, ForgotPassword, VerificationCode, ResetPassword, PasswordSuccessfull, SignUp, Fixture, GlobalSearch, TeamDetailInfo, MatchDetail, Profile, Settings, NotificationSettings };
