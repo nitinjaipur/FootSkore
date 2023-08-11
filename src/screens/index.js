@@ -13,5 +13,9 @@ import { MatchDetail } from './matchDetail/matchDetail';
 import { Profile } from './sideDrawer/profile';
 import { Settings } from './sideDrawer/settings/settings';
 import { NotificationSettings } from './sideDrawer/settings/notificationSetting';
+import { ChangePassword } from './sideDrawer/settings/changePassword';
+import { PrivacyPolicy } from './sideDrawer/privacyPolicy';
+import { ContactUs } from './sideDrawer/conteactUs';
+import { FAQ } from './sideDrawer/faq';
 
-export { GetStarted, Welcome, LogIn, ForgotPassword, VerificationCode, ResetPassword, PasswordSuccessfull, SignUp, Fixture, GlobalSearch, TeamDetailInfo, MatchDetail, Profile, Settings, NotificationSettings };
+export { GetStarted, Welcome, LogIn, ForgotPassword, VerificationCode, ResetPassword, PasswordSuccessfull, SignUp, Fixture, GlobalSearch, TeamDetailInfo, MatchDetail, Profile, Settings, NotificationSettings, ChangePassword, PrivacyPolicy, ContactUs, FAQ };

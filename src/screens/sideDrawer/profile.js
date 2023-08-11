@@ -3,9 +3,7 @@ import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { View, Text, FlatList, StyleSheet, Image, StatusBar} from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 import { InfoInput, SolidButton } from '../../components/index';
-import Icon from 'react-native-vector-icons/Ionicons';
 import { themeDefault } from '../../theme/index';
-
 const MARGIN = getStatusBarHeight()
 
 const style = StyleSheet.create({

@@ -12,7 +12,10 @@ const themeDefault = {
     green: '#1F8E4B',
     blue: '#409CFF',
     backGround: '#e6e6e6',
-    otp: '#737373'
+    otp: '#737373',
+    mailBlue: '#007ABD',
+    ink: '#1025DB',
+    saffron: '#DB6241'
   },
 
   fonts: {

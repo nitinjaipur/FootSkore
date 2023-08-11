@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import { getStatusBarHeight } from 'react-native-status-bar-height';
 import { View, Text, StyleSheet, Switch, Pressable} from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
-import { InfoInput, SolidButton } from '../../../components/index';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { themeDefault } from '../../../theme/index';
-
 const MARGIN = getStatusBarHeight()
 
 const style = StyleSheet.create({
@@ -14,7 +12,6 @@ const style = StyleSheet.create({
     marginTop: MARGIN
   },
   top: {
-    // flex: 0.5,
     height: s(70),
     alignItems: 'center',
     justifyContent: 'center',
@@ -64,7 +61,7 @@ const Settings = ({navigation}) => {
             <Icon name='chevron-forward-outline' size={s(10)} />
           </View>
         </Pressable>
-        <Pressable>
+        <Pressable onPress={() => {navigation.navigate('ChangePassword')}}>
           <View style={style.options}>
             <Text style={style.text}>Change Password</Text>
             <Icon name='chevron-forward-outline' size={s(10)} />
@@ -80,11 +77,9 @@ const Settings = ({navigation}) => {
           />
         </View>
       </View>
-
       <View style={style.bottom}>
         <Text style={style.footerText}>Log out</Text>
       </View>
-
     </View>
   );
 }

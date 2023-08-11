@@ -4,7 +4,6 @@ import { View, Text, StyleSheet, Switch, Pressable} from 'react-native';
 import { s, vs, ms, mvs } from 'react-native-size-matters';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { themeDefault } from '../../../theme/index';
-
 const MARGIN = getStatusBarHeight()
 
 const style = StyleSheet.create({
@@ -42,7 +41,6 @@ const style = StyleSheet.create({
   }
 });
 
-
 const NotificationSettings = ({navigation}) => {
   const [match, setMatch] = useState(false);
   const [starter, setStarter] = useState(false);
@@ -53,14 +51,12 @@ const NotificationSettings = ({navigation}) => {
   const [lineup, setLineup] = useState(false);
   return(
     <View style={style.main}>
-
       <View style={style.top}>
         <Pressable onPress={() => {navigation.goBack()}}>
           <Icon name="arrow-back-outline" size={s(21)} color={themeDefault.colors.black} />
         </Pressable>
         <Text style={style.header}>NOTIFICATION SETTINGS</Text>
       </View> 
-      
       <View style={style.middle}>
         <View style={style.options}>
           <Text style={style.text}>Match Reminder</Text>
@@ -126,7 +122,6 @@ const NotificationSettings = ({navigation}) => {
           />
         </View>
       </View>
-
     </View>
   );
 }
