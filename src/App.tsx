@@ -20,7 +20,7 @@ function App(): JSX.Element {
 
   return (
     <>
-      <DrawerNavigator/>
+      <OnBoardingNavigator/>
     </>
   );
 }

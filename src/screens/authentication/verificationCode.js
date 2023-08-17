@@ -123,7 +123,6 @@ const VerificationCode = props => {
               onChangeText={(text) => {
                 setotpA(text)
                 otpA === '' ? otpRefB.current.focus() : otpRefA.current.focus();
-                
               }}
               style={style.otpText}
             />

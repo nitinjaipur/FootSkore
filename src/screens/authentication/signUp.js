@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, KeyboardAvoidingView, Text, StatusBar, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { SolidButton, DisabledButton, InfoInput, PasswordInput } from '../../components/index';
 import {s, vs, ms, mvs} from 'react-native-size-matters';
 import {themeDefault} from '../../theme/index';
+import { storage } from '../../utils/index';
 
 const style = StyleSheet.create({
   wrapperView: {
@@ -55,8 +56,31 @@ const style = StyleSheet.create({
   },
 });
 
+
+
 const SignUp = props => {
   const {isVerified} = props.route.params;
+  const [email, setEmail] = useState();
+  const [name, setName] = useState();
+  const [password, setPassword] = useState();
+
+  const signUp = (props) => {
+
+    // getting all keys i.e. list of users
+    const keys = storage.getAllKeys();
+  
+    // temp step
+    // saving 1 user
+    let len = keys.length;
+    let currentUser = `user${{len}}`;
+    let users = {};
+
+    console.log(email);
+    console.log(name);
+    console.log(password);
+  
+  }
+
   return (
     <KeyboardAvoidingView style={style.wrapperView}>
       <StatusBar hidden={false} />
@@ -121,9 +145,9 @@ const SignUp = props => {
             </Text>
           )}
         </View>
-        <InfoInput editable={!isVerified} title="Email" />
-        <PasswordInput editable={isVerified} title="Password" />
-        <InfoInput editable={isVerified} title="Name" />
+        <InfoInput setValue={setEmail} editable={!isVerified} title="Email" />
+        <PasswordInput setValue={setPassword} editable={isVerified} title="Password" />
+        <InfoInput setValue={setName} editable={isVerified} title="Name" />
         <InfoInput title="Time Zone" />
       </View>
       <View style={style.buttonContainer}>
@@ -134,6 +158,7 @@ const SignUp = props => {
             title="Sign Up"
             backgroundColor={themeDefault.colors.red}
             textColor={themeDefault.colors.white}
+            onPress={() => {signUp}}
           />
         )}
       </View>
