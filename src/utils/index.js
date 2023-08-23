@@ -1,7 +1,7 @@
-import { MMKV } from 'react-native-mmkv'
+// import { MMKV } from 'react-native-mmkv'
 
-// mmky object for storage
-const storage = new MMKV();
+// // mmky object for storage
+// const storage = new MMKV();
 
 // function for Email regex varificarion
 const isValidEmail = (text) => {
@@ -14,8 +14,8 @@ const isValidPassword = (text) => {
   let reNonAlpha = /\W+/;
   let reAlpha = /[a-zA-Z]+/;
   let reNum = /[0-9]+/;
-  return (reNonAlpha.test(text) && reAlpha.test(text) && reNum.test(text));
+  return (reNonAlpha.test(text) && reAlpha.test(text) && reNum.test(text) && (text.length > 7));
 }
 
 
-export { storage, isValidEmail, isValidPassword };
+export { isValidEmail, isValidPassword };

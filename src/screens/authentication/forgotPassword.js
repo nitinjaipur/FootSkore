@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, KeyboardAvoidingView, Text, StatusBar, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { SolidButton, InfoInput } from '../../components/index';
@@ -49,6 +49,8 @@ const style = StyleSheet.create({
 });
 
 const ForgotPassword = props => {
+  const [email, setEmail] = useState();
+  const onChangeEmail = (text) => {setEmail(text);}
   return (
     <KeyboardAvoidingView style={style.wrapperView}>
       <StatusBar hidden={false} />
@@ -68,7 +70,7 @@ const ForgotPassword = props => {
         </Text>
       </View>
       <View style={style.inputTextInputContainer}>
-        <InfoInput title="Email" />
+        <InfoInput title="Email" value={email} onChangeText={onChangeEmail} />
       </View>
       <View style={style.buttonContainer}>
         <SolidButton

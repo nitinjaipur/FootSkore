@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { SolidButton, DisabledButton, InfoInput, PasswordInput } from '../../components/index';
 import {s, vs, ms, mvs} from 'react-native-size-matters';
 import {themeDefault} from '../../theme/index';
-import { storage } from '../../utils/index';
+
 
 const style = StyleSheet.create({
   wrapperView: {
@@ -60,26 +60,31 @@ const style = StyleSheet.create({
 
 const SignUp = props => {
   const {isVerified} = props.route.params;
+
   const [email, setEmail] = useState();
   const [name, setName] = useState();
   const [password, setPassword] = useState();
 
-  const signUp = (props) => {
+  const onChangeEmail = (text) => {setEmail(text);}
+  const onChangeName = (text) => {setName(text);}
+  const onChangePassword = (text) => {setPassword(text);}
 
-    // getting all keys i.e. list of users
-    const keys = storage.getAllKeys();
-  
-    // temp step
-    // saving 1 user
-    let len = keys.length;
-    let currentUser = `user${{len}}`;
-    let users = {};
+  // const signUp = (props) => {
 
-    console.log(email);
-    console.log(name);
-    console.log(password);
+  //   // getting all keys i.e. list of users
+  //   const keys = storage.getAllKeys();
   
-  }
+  //   // temp step
+  //   // saving 1 user
+  //   let len = keys.length;
+  //   let currentUser = `user${{len}}`;
+  //   let users = {};
+
+  //   console.log(email);
+  //   console.log(name);
+  //   console.log(password);
+  
+  // }
 
   return (
     <KeyboardAvoidingView style={style.wrapperView}>
@@ -99,7 +104,7 @@ const SignUp = props => {
         </Text>
         <View style={style.detailHolder}>
           <Text style={style.detailText}>
-            Already have an account?{' '}
+            Already have an account?
             <Text
               style={style.footerTextLink}
               onPress={() => {
@@ -145,10 +150,10 @@ const SignUp = props => {
             </Text>
           )}
         </View>
-        <InfoInput setValue={setEmail} editable={!isVerified} title="Email" />
-        <PasswordInput setValue={setPassword} editable={isVerified} title="Password" />
-        <InfoInput setValue={setName} editable={isVerified} title="Name" />
-        <InfoInput title="Time Zone" />
+        <InfoInput title="Email" value={email} onChangeText={onChangeEmail} editable={!isVerified} />
+        <PasswordInput title="Password" value={password} onChangeText={onChangePassword} editable={isVerified} />
+        <InfoInput title="Name" value={name} onChangeText={onChangeName} editable={isVerified} />
+        {/* <InfoInput title="Time Zone" /> */}
       </View>
       <View style={style.buttonContainer}>
         {isVerified == false ? (

@@ -1,9 +1,10 @@
-import React from 'react';
-import { View, KeyboardAvoidingView, Text, StatusBar, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, KeyboardAvoidingView, Text, StatusBar, StyleSheet, Alert } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { SolidButton, InfoInput, PasswordInput } from '../../components/index';
 import {s, vs, ms, mvs} from 'react-native-size-matters';
 import {themeDefault} from '../../theme/index';
+import { isValidEmail, isValidPassword } from '../../utils/index';
 
 const style = StyleSheet.create({
   wrapperView: {
@@ -69,6 +70,17 @@ const style = StyleSheet.create({
 });
 
 const LogIn = props => {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const onChangeEmail = (text) => {setEmail(text);}
+  const onChangePassword = (text) => {setPassword(text);}
+  const validateData = () => {
+    (!isValidEmail(email) && !isValidPassword(password)) ?
+      Alert.alert('Invalid Email And Password', 'Please check Email And Password before Login') :
+      ((isValidEmail(email) && !isValidPassword(password)) ? Alert.alert('Invalid Password', 'Please check Password before Login') :
+        ((!isValidEmail(email) && isValidPassword(password)) ? Alert.alert('Invalid Email', 'Please check Email before Login') :
+        Alert.alert('Successfull', 'Valid') ))
+  }
   return (
     <View style={style.wrapperView}>
       <StatusBar hidden={false} />
@@ -90,9 +102,9 @@ const LogIn = props => {
         </View>
         <View style={style.inputTextInputContainer}>
           <View style={{marginTop: s(17)}}>
-            <InfoInput title="Email" />
+            <InfoInput title="Email" value={email} onChangeText={onChangeEmail} />
           </View>
-          <PasswordInput title="Password" />
+          <PasswordInput title="Password" value={password} onChangeText={onChangePassword} />
         </View>
         <View style={{width: '85%', alignSelf: 'center'}}>
           <Text
@@ -106,6 +118,7 @@ const LogIn = props => {
         <View style={style.buttonContainer}>
           <SolidButton
             title="Sign In"
+            onPress={validateData}
             backgroundColor={themeDefault.colors.red}
             textColor={themeDefault.colors.white}
           />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, KeyboardAvoidingView, Text, StatusBar, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { SolidButton, PasswordInput } from '../../components/index';
@@ -50,6 +50,10 @@ const style = StyleSheet.create({
 });
 
 const ResetPassword = props => {
+  const [newPassword, setNewPassword] = useState();
+  const [confirmPassword, setConfirmPassword] = useState();
+  const onChangeNewPassword = (text) => {setNewPassword(text);}
+  const onChangeConfirmPassword = (text) => {setConfirmPassword(text);}
   return (
     <KeyboardAvoidingView style={style.wrapperView}>
       <StatusBar hidden={false} />
@@ -67,8 +71,8 @@ const ResetPassword = props => {
         <Text style={style.detailText}>Set new password</Text>
       </View>
       <View style={style.inputTextInputContainer}>
-        <PasswordInput title="New Password" />
-        <PasswordInput title="Confirm Password" />
+        <PasswordInput title="New Password" value={newPassword} onChangeText={onChangeNewPassword} />
+        <PasswordInput title="Confirm Password" value={confirmPassword} onChangeText={onChangeConfirmPassword} />
       </View>
       <View style={style.buttonContainer}>
         <SolidButton

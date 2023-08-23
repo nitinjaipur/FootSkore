@@ -192,7 +192,7 @@ const VerificationCode = props => {
       </View>
       <View style={style.footerContainer}>
         <Text style={style.footerText}>
-          Didn't recieve the code?{' '}
+          Didn't recieve the code?
           <Text style={style.footerTextLink}>Resend</Text>
         </Text>
       </View>
